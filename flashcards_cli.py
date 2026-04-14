@@ -1,6 +1,7 @@
 #pip install rich
 from rich.table import Table
 from rich.console import Console
+import json
 
 console = Console()
 table = Table(title="Flashcards")
@@ -14,7 +15,6 @@ tab.add_column("ID", style="magenta")
 tab.add_column("Question", style="green")
 tab.add_column("Answer", style="yellow")
 
-import json
 
 def display_flashcards():
       table.add_row(str(d["ID"]), d["Questions"], "Answer?")
