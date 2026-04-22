@@ -15,7 +15,7 @@ elif input_option == "2":
 elif input_option == "3":
     import storage
     from storage import delete_flashcards
-    delete_flashcards()
+    delete_flashcards(int(input("Choose ID number to delete flashcard: ")))
 
 elif input_option == "4":
     print("Goodbye!")

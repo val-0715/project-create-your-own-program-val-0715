@@ -45,9 +45,8 @@ def create_flashcards():
             json.dump(flash_var, f, indent = 2)
             print("success!")
 
-def delete_flashcards():
+def delete_flashcards(usr_input):
     d = reading_data()
-    usr_input = int(input("Choose ID number to delete flashcard: "))
     data = [card for card in d if card.get('ID') != usr_input]
 
     with open('flashinfo.json', "w") as f:
